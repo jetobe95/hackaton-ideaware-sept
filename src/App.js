@@ -1,21 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import _ from 'lodash';
+import React, { Component } from 'react';
+import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
 import './App.css';
-import LoadingStart from './sections/start/components/LoadingStart';
-import LandingPageLayout from './sections/start/components/landing-page-layout';
-import SoundHouseLogoWithSubtitle from './sections/start/components/sound-house-with-subtitle';
-import title from './title.svg';
-import Apploadingafterlogin from './sections/start/containers/App-loading-after-login';
+import data from './datos';
 import Genre from './sections/home/components/genre';
 import Sidebar from './sections/home/components/sidebar';
-import data from './datos.json';
+import SoundHouseLogoWithSubtitle from './sections/start/components/sound-house-with-subtitle';
+import Welcome from './sections/home/containers/welcome';
 
-import _ from 'lodash';
-import { Router, Switch, NavLink, BrowserRouter } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className='browser-router'>
           <Sidebar>
             <SoundHouseLogoWithSubtitle />
 
@@ -46,12 +43,15 @@ class App extends Component {
                 <NavLink to="/">Your Music</NavLink>
               </ul>
             </li>
+            <li>
+              <ul>Your Music</ul>
+            </li>
           </Sidebar>
 
-          <div className="main">
-            {_.map(data.genres,(genre)=><Genre {...genre}/>)}
-           
-          </div>
+          <Switch >
+            <Route path="/" component={Welcome} />
+            <Route />
+          </Switch>
         </div>
       </BrowserRouter>
     );

@@ -18,10 +18,10 @@ const Genre = ({ image, name }) => {
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        flex:1,
+       
         textAlign:"center",
-        backgroundImage: `url(${logo})`,
-
+        backgroundImage: `url(${image})`,
+        margin:7,
         
         width: 190,
         height: 85,
