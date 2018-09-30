@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sh-landing {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./genres/landing-page-img-1.png');
+    background-size: cover;
+}
+
+.sh-landing-logo {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 50%;
+    height: 20vh;
+    /* background-color: aqua; */
+    background-image: url('./logo2.png');
+    background-repeat: no-repeat;
+}
+
+.sh-landing-content {
+    position: absolute;
+    bottom: 0vh;
+    width: 100%;
+    height: 70vh;
+    background-image: url('./genres/landing-image.png');
+    background-size: 100% 110% ;
+    mix-blend-mode: lighten;
+}
+
+.sh-landing-title {
+    margin-top: 10vh;
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+.sh-landing-p {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+
+.sh-landing-buttons {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: 10vh;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.btn-facebook {
+    width: 15%;
+    margin: 0 5px;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 21px;
+    background-color: #486dc0;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.btn-twitter {
+    width: 15%;
+    margin: 0 5px;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 21px;
+    background-color: #1da1f2;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.btn-facebook:focus, .btn-twitter:focus {
+    outline: none;
+} 
+
+.sh-landing-or {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 25px;
+}
+
+.sh-landing-a {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sh-landing-section {
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.sh-landing-section-div {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./sectionBG.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sh-landing-section-div h2 {
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+}

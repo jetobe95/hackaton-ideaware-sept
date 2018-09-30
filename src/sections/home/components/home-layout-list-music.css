@@ -1,0 +1,32 @@
+.home-layout-list-music-container {
+    /* background-image: linear-gradient(-134deg, #DD166B 0%, #722FD9 100%); */
+    /* background-image:linear-gradient(#DD166B,#722FD9); */
+    /* background-image:linear-gradient(#DD166B,#722FD9); */
+    background-image:linear-gradient(#bd0152,rgb(31, 31, 31));
+    margin-left: 220px;
+    /* width: calc(100%-210px); */
+    padding: 0px 20px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+
+
+
+
+}
+
+.home-layout-list-music-inner {
+
+    padding: 0px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+
+
+
+}

@@ -4,6 +4,9 @@ import logo from './logo.svg';
 import microphone from '../../fotos/microphone.png';
 const size = 40;
 const SongDetailComponent = ({
+  url,
+  playing,
+  
   tubnail,
   favorite,
   name,
@@ -11,10 +14,13 @@ const SongDetailComponent = ({
   lyric = true,
   duration,
   handleFavorite,
-  videoId
+  videoId,
+  playSong
 }) => {
   return (
-    <div className="song-detail-container">
+    <div className="song-detail-container"
+    onClick={()=>playSong()}
+    >
       <img
         style={{ alignContent: 'flex-start' }}
         height={37}
@@ -52,9 +58,9 @@ const SongDetailComponent = ({
         </div>
       </div>
       <p className="artist-text" style={{ textAlign: 'left' }}>
-        {'Song Name'}
+        {name}
       </p>
-      <p className="artist-text">{'Artist'}</p>
+      <p className="artist-text">{artist}</p>
       <div
         style={{
           display: 'flex',

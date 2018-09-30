@@ -21,11 +21,17 @@ export default class Welcome extends Component {
           </div>
           <h3 style={{ color: 'white', alignSelf: 'flex-end' }}>
             {sl ? (
-              <NavLink className="" to="/loading">
+              <NavLink 
+              onClick={()=>this.props.handleSidebar()}
+              className=""  to="/loading">
                 {'Continue >> '}
               </NavLink>
+
             ) : (
-              <NavLink className="" to="/loading">
+              <NavLink 
+              
+              onClick={()=>this.props.handleSidebar()}
+              className="" to="/loading">
                 {' '}
                 Skip >>{' '}
               </NavLink>

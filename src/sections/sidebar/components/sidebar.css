@@ -6,8 +6,9 @@
     z-index: 1; 
     top: 0; 
     left: 0;
+
     background-color: #252525;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    /* overflow-x: hidden; Disable horizontal scroll */
     padding-top: 20px;
     padding-left: 10px;
     box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.5);

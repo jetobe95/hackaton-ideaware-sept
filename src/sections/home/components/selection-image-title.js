@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './selection-image.css'
 export default ({ image, name }) => {
   return (
     <div
-      className={selected ? '.container-genre-selected' : 'container-genre'}
+      className='container-selection'
       style={{
         backgroundImage: `url(${image})`
       }}

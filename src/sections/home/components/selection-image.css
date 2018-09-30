@@ -1,5 +1,7 @@
 .container-selection {
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    
     background-size: auto;
     width: 191px;
     height: 191px;
@@ -9,19 +11,24 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    
     background-repeat: no-repeat;
-   
-
-
+    margin: 20px;
+    background-color: 'rgba(255,255,255,0.7)'
+    
+    
+    
 }
 
 .Text-image-selection {
+    
+    /* text-shadow:0px 2px 4px  rgba(0,0,0,0.5); */
+    text-shadow : 1px 1px 6px  rgba(0,0,0,0.5);
     color: #ffffff;
     font-family: Quicksand;
     font-size: 20px;
@@ -33,5 +40,7 @@
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0px;
-
+    position: relative;
+    top: 40px;
+    
 }
