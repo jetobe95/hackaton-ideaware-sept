@@ -1,0 +1,10 @@
+
+
+  
+.active-link {
+  
+    border-image: linear-gradient(-134deg, #DD166B 0%, #722FD9 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+
+}

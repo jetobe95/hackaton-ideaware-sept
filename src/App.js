@@ -1,58 +1,37 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { Component ,Fragment} from 'react';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
 import './App.css';
-import data from './datos';
-import Genre from './sections/home/components/genre';
-import Sidebar from './sections/home/components/sidebar';
+
+import Sidebar from './sections/sidebar/components/sidebar';
 import SoundHouseLogoWithSubtitle from './sections/start/components/sound-house-with-subtitle';
 import Welcome from './sections/home/containers/welcome';
+import NavLinkContainer from './sections/sidebar/containers/nav-link';
+import AudioPlayer from './sections/player/player';
+import Apploadingafterlogin from './sections/start/containers/App-loading-after-login';
+import Home from './sections/home/containers/Home';
+import SongDetailsComponent from './sections/widgets/song-details-component';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className='browser-router'>
+        <Fragment>
           <Sidebar>
             <SoundHouseLogoWithSubtitle />
+            <NavLinkContainer/>
 
-            <li>
-              <ul>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  style={{
-                    backgroundColor: '#252525',
-                    color: 'white',
-                    border: 'none',
-                    width: '100%',
-                    margin: 0,
-                    padding: 0
-                  }}
-                />
-              </ul>
-              <ul>
-                <NavLink to="/" activeClassName="active-link">
-                  Home
-                </NavLink>
-              </ul>
-              <ul>
-                <NavLink to="/">Browse</NavLink>
-              </ul>
-              <ul>
-                <NavLink to="/">Your Music</NavLink>
-              </ul>
-            </li>
             <li>
               <ul>Your Music</ul>
             </li>
           </Sidebar>
 
-          <Switch >
-            <Route path="/" component={Welcome} />
+          <Switch>
+            <Route exact  path="/" component={SongDetailsComponent} />
+            <Route  exact path="/loading" component={Apploadingafterlogin} />
             <Route />
           </Switch>
-        </div>
+        </Fragment>
       </BrowserRouter>
     );
   }

@@ -1,12 +1,12 @@
 import React from 'react';
 import './loading-start.css';
-import logo from './sound-house-logo.svg';
+import logo from './1_objects.svg';
 
 const SoundHouseLogoWithSubtitle = () => {
   return (
     <img
       style={{
-        margin:1,
+        margin:24,
         zIndex:2,
       }}
        

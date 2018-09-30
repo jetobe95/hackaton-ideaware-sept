@@ -1,0 +1,29 @@
+.home-layout {
+    background-image: linear-gradient(-134deg, #DD166B 0%, #722FD9 100%);
+
+    margin-left: 210px;
+    width: calc(100%-210px);
+    padding: 0px 20px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+
+
+
+
+}
+.home-layout-inner{
+    
+        padding: 0px 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items:center; 
+        align-content: flex-start;
+        
+    
+      
+}

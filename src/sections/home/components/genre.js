@@ -1,34 +1,36 @@
 import React from 'react';
 import './genre.css';
-import logo from './indie.png';
-var sectionStyle = {
-  backgroundImage: 'url(' + logo + ')'
-};
-
-const styl = image => ({
-  width: '100%',
-  height: 'auto',
-  backgroundImage: `"url("${image}")"`
-});
-const Genre = ({ image, name }) => {
+import checkbox from '../../../fotos/checkbox.png';
+const Genre = ({ image, name,selected=false ,change}) => {
   return (
     <div
-    className='container-genre'
+      onClick={() => change()}
+      className={selected? '.container-genre-selected':"container-genre"}
       style={{
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-       
-        textAlign:"center",
+        flexDirection:'column',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+
+        textAlign: 'center',
         backgroundImage: `url(${image})`,
-        margin:7,
-        
+        margin: 7,
+
         width: 190,
         height: 85,
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        
+        border:selected?'border: 1px solid #ffffff':'none',
+        backgroundColor: selected? 'rgba(255,255,255,0.9)':'rgba(255,255,255,0)' ,
+       
+        
       }}
     >
-      <p className='Text-image'>{name}</p>
+  {selected&&
+    <img src={checkbox} className='checkbox-genre' alt=""/>
+  
+  }
+      <p  style={selected?{fontSize:15}:{fontSize:20}} className="Text-image">{name}</p>
 
       {/* </p> */}
     </div>

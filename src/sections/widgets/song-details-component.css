@@ -1,0 +1,83 @@
+.song-detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 220px;
+  width: calc(100%-200px);
+  /* padding-right: 10px; */
+  /* padding-left: 10px; */
+}
+
+.artist-text {
+  color: white;
+  flex: 0.2;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0px;
+}
+
+.dropbtn {
+  
+  
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 1;
+  left: 10px;
+  top: -1px;
+
+  background-color: #252525;
+  min-width: 160px;
+  box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+#options {
+  /* display: none; */
+  
+
+  
+}
+.dropdown-content a {
+  width: 78%;
+  color: white;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-left: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

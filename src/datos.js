@@ -2,12 +2,14 @@ const genres = [
   {
     id: 1,
     name: 'Indie',
-    image: require('./fotos/indie.png')
+    image: require('./fotos/indie.png'),
+   
   },
   {
     id: 2,
     name: 'Rock',
-    image: require('./fotos/rock.png')
+    image: require('./fotos/rock.png'),
+   
   },
   {
     id: 3,
