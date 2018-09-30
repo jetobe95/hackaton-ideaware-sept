@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="125">
+	<defs>
+		<clipPath id="clip_0">
+			<rect x="-593" y="-338" width="1280" height="800" clip-rule="evenodd"/>
+		</clipPath>
+		<linearGradient id="gradient_0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="96.900002" y2="126.25">
+			<stop offset="0" stop-color="rgb(221,22,107)"/>
+			<stop offset="1" stop-color="rgb(114,47,217)"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip_0)">
+		<path fill="url(#gradient_0)" stroke="none" d="M41.1897 26.8461L41.1729 98.1539C41.1729 107.896 34.4207 113.699 26.6567 113.699C18.7418 113.699 12.4806 107.896 12.4806 98.1539L12.5045 72.8263L0.0215534 72.8263L0 98.1539C0 114.886 11.9681 125 26.6567 125C41.119 125 53.8091 114.886 53.8091 98.1539L53.8091 52.1901L53.8032 52.1901L53.8271 26.8461C53.8271 17.1042 60.5793 11.3026 68.3433 11.3026C76.2594 11.3026 82.5194 17.1042 82.5194 26.8461L82.4799 52.4486L94.9629 52.4486L95 26.8461C95 10.1139 83.0319 0 68.3433 0C53.881 0 41.1897 10.1139 41.1897 26.8461L41.1897 26.8461Z"/>
+	</g>
+</svg>

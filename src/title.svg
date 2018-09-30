@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="820" height="122">
+	<defs>
+		<clipPath id="clip_0">
+			<rect x="-229" y="-186" width="1280" height="1606" clip-rule="evenodd"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip_0)">
+		<text fill="rgb(255,255,255)" stroke="none" font-size="65" font-weight="bold" font-family="Segoe UI" x="59.545898" y="65.756348">
+				THE HOUSE OF MUSIC.
+		</text>
+	</g>
+	<defs>
+		<clipPath id="clip_1">
+			<rect x="-229" y="-186" width="1280" height="1606" clip-rule="evenodd"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip_1)">
+		<text fill="rgb(255,255,255)" stroke="none" transform="translate(0 91)" font-size="25" font-family="Segoe UI" x="60.55542" y="25.252441">
+				Play and download music on your mobile, tablet and computer.
+		</text>
+	</g>
+</svg>

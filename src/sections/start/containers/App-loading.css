@@ -1,0 +1,8 @@
+@keyframes Logo-app-loading {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .Logo-app-loading {
+    animation: Logo-app-loading infinite 1s linear;
+    
+  }
