@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, NavLink, Switch, Route,withRouter } from 'react-router-dom';
 import './App.css';
 
 import Sidebar from './sections/sidebar/components/sidebar';
@@ -20,36 +20,37 @@ class App extends Component {
     const { LoadVideos } = this.props
     LoadVideos('Vallenato')
   }
-  state={sidebar:false}
+  state = { sidebar: false }
   handleSidebar = () => {
-    this.setState({sidebar:true})
+    this.setState({ sidebar: true })
   }
-  
+
   render() {
-    const { state } = this.props;
-    console.log({state})
+    const { state, User } = this.props;
+    console.log("Prop App.js ",this.props)
     
+
     return (
       <BrowserRouter>
         <Fragment>
 
-        {this.state.sidebar&&
-          <Sidebar>
-            <SoundHouseLogoWithSubtitle />
-            <NavLinkContainer />
-          </Sidebar>
-        
-        }
+          {User.showSidebar &&
+            <Sidebar>
+              <SoundHouseLogoWithSubtitle />
+              <NavLinkContainer />
+            </Sidebar>
+
+          }
 
           <Switch>
-            <Route  exact path="/" render={()=><Landing />} />
-            <Route  exact path="/welcome" render={()=><Welcome handleSidebar={this.handleSidebar}/>} />
+            <Route exact path="/" render={() => <Landing />}  />
+            <Route exact path="/welcome" render={() => <Welcome handleSidebar={this.handleSidebar} />} />
             <Route exact path="/loading" component={Apploadingafterlogin} />
             <Route exact path="/Home" component={HomeListMusicContainer} />
-           
+
           </Switch>
-          {this.state.sidebar&&
-          <AudioPlayer/>
+          {User.showSidebar &&
+            <AudioPlayer />
           }
         </Fragment>
       </BrowserRouter>
@@ -58,12 +59,12 @@ class App extends Component {
 }
 const MapStateToProps = state => {
   return {
-    state
+    User: state.User
   };
 };
 const MapDispatchToProps = dispatch => {
   return {
-    LoadVideos:(q)=>dispatch(Fetcher(q)) 
+    LoadVideos: (q) => dispatch(Fetcher(q))
   };
 };
 

@@ -4,10 +4,17 @@ import _ from 'lodash';
 import data from '../../../datos';
 import Genre from '../components/genre';
 import { NavLink } from 'react-router-dom';
-export default class Welcome extends Component {
+import { connect } from 'react-redux'
+class Welcome extends Component {
   state = {
     sl: false
   };
+  setShowSideBar = () => {
+    this.props.dispatch({
+      type: 'SHOW_SIDE_BAR'
+    })
+    this.props.handleSidebar()
+  }
   render() {
     const { sl } = this.state;
     return (
@@ -21,21 +28,21 @@ export default class Welcome extends Component {
           </div>
           <h3 style={{ color: 'white', alignSelf: 'flex-end' }}>
             {sl ? (
-              <NavLink 
-              onClick={()=>this.props.handleSidebar()}
-              className=""  to="/loading">
+              <NavLink
+                onClick={this.setShowSideBar}
+                className="" to="/loading">
                 {'Continue >> '}
               </NavLink>
 
             ) : (
-              <NavLink 
-              
-              onClick={()=>this.props.handleSidebar()}
-              className="" to="/loading">
-                {' '}
-                Skip >>{' '}
-              </NavLink>
-            )}
+                <NavLink
+
+                  onClick={this.setShowSideBar}
+                  className="" to="/loading">
+                  {' '}
+                  Skip >>{' '}
+                </NavLink>
+              )}
           </h3>
           <div />
         </div>
@@ -53,3 +60,4 @@ export default class Welcome extends Component {
     );
   }
 }
+export default connect(null)(Welcome)

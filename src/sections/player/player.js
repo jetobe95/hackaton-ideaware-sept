@@ -6,30 +6,55 @@ import ReactPlayer from 'react-player';
 import ReactPlayerComponent from './components/react-player-component';
 import BottonsLayout from './components/botons-layout';
 import ProgressBarPlayer from './components/progress-bar-player';
+import _ from 'lodash';
 import { connect } from 'react-redux';
-import { playSong ,handleplaySong} from '../../redux/actions/actions';
+import { playSong, handleplaySong } from '../../redux/actions/actions';
 const { PlayPause, MuteUnmute } = controls;
 class AudioPlayer extends Component {
+  state = {
+    progress: 0,
+    duration:0
+  }
+
+
+
+  handleProgress=({played,playedSeconds,loadedSeconds,loaded})=>{
+    this.setState(prev=>{
+      return {
+        progress:playedSeconds
+      }
+    })
+  }
   render() {
-    console.log(this.props, 'Props');
+    // console.log(this.props, 'Props');
 
     const {
       url1,
       muted,
       handleplaySong,
-
       Player: {
         repeat,
         playing,
         volume,
         random,
-        currentSong: {
-          id: { videoId },
-          snippet: { title: name, channelTitle: artist }
-        }
+        ...Player,
       }
+
+      // Player: {
+      //   repeat,
+      //   playing,
+      //   volume,
+      //   random,
+      //   currentSong: {
+      //     id: { videoId },
+      //     snippet: { title: name, channelTitle: artist }
+      //   }
+      // }
     } = this.props;
 
+    const videoId = _.get(Player, 'currentSong.id.videoId')
+    const name = _.get(Player, 'currentSong.snippet.title')
+    const artist = _.get(Player, 'currentSong.snippet.channelTitle');
     const url = 'https://www.youtube.com/watch?v=pNzhLB6vSGQ';
 
     return (
@@ -57,6 +82,9 @@ class AudioPlayer extends Component {
             videoId={videoId}
             muted={muted}
             playing={playing}
+            onProgress={this.handleProgress}
+            onDuration={duration=>this.setState({duration})}
+
           />
           <div
             style={{
@@ -93,10 +121,12 @@ class AudioPlayer extends Component {
                 alignItems: 'center'
               }}
             >
-              <BottonsLayout 
-              handleplaySong={handleplaySong}
-              playing={!(playing)} random={random} repeat={repeat}/>
-              <ProgressBarPlayer currentSong={{ duration: 10 }} />
+              <BottonsLayout
+                handleplaySong={handleplaySong}
+                playing={!(playing)} random={random} repeat={repeat} />
+              <ProgressBarPlayer 
+              currentTime={this.state.progress}
+              currentSong={{ duration: this.state.duration, }} />
             </div>
           </div>
         </div>

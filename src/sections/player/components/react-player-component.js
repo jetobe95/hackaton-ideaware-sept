@@ -9,7 +9,8 @@ export default ({
   playing = false,
   repeat = false,
   style = {},
-  volume
+  volume,
+  ...props
 }) => {
   const YOUTUBE_BASE = videoid => `https://www.youtube.com/watch?v=${videoid}`;
 
@@ -25,6 +26,7 @@ export default ({
       onDuration={da => console.log(da)}
       muted={muted}
       loop={repeat}
+      {...props}
     />
   );
 };

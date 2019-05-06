@@ -15,6 +15,10 @@
     margin: 5px;
   
   }
+  .title{
+    color:white;
+    font-size: 50px;
+  }
   .main-inner {
     padding: 0px 20px;
     height: 100%;

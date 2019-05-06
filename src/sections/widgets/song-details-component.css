@@ -6,21 +6,31 @@
   /* margin-left: 220px; */
   /* width: calc(100%-340px); */
   width: 80%;
+  /* min-height: 10%; */
+  /* background: red; */
+  margin:1px 0px 1px 0px;
   /* padding-right: 10px; */
   /* padding-left: 10px; */
-  border-width: 0.5px;
+  /* border-width: 0;
   border-top: solid;
-  border-color: grey; 
+  border-color: grey;  */
+  border:0px solid grey;
+  border-width: 0.5px 0px 0px 0px;
+  overflow: hidden;
 }
 .song-detail-container  :hover{
   /* background-color: black; */
   /* z-index: 2; */
   cursor: pointer;
 }
+.song-detail-container img{
+  /* height: 100%; */
+  /* width: 40px; */
+}
 
 .artist-text {
   color: white;
-  flex: 0.2;
+  width: 40%;
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;

@@ -22,9 +22,8 @@ const SongDetailComponent = ({
     onClick={()=>playSong()}
     >
       <img
+      
         style={{ alignContent: 'flex-start' }}
-        height={37}
-        width={55}
         src={tubnail || logo}
         alt={name}
       />

@@ -15,6 +15,8 @@ class HomeListMusicContainer extends Component {
       // console.log(song)
       // return
       return (
+        <div>
+        
         <SongDetailComponent
           playSong={() => playSong(song)}
           name={song.snippet.title}
@@ -23,9 +25,13 @@ class HomeListMusicContainer extends Component {
           artist={song.channelTitle}
           tubnail={song.snippet.thumbnails.default.url}
         />
+        </div>
       );
     });
-    return <HomeLayoutListMusic>{SONGS}</HomeLayoutListMusic>;
+    return <HomeLayoutListMusic>
+    <h1 className="title">Vallenato</h1>
+    {SONGS}
+    </HomeLayoutListMusic>;
   }
 }
 
